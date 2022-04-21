@@ -65,3 +65,21 @@ git add .
 git status
 git commit -m "Initial commit"
 
+
+now, we need to create an ssh key to link our cloud9 vm to github.
+
+ssh-keygen -t rsa -b 4096 -C "tce_mc@telus.net"
+
+on github, navigate to profile settings, then ssh and gpg keys.
+
+in cloud9 we can copy our ssh key with cat ~/.ssh/id_rsa.pub to display in terminal and copy.
+
+oh github, we will paste to the key field and put the title as cloud9
+
+now to link to our github repo, 
+
+git remote add origin git@github.com:your_git_username/repo-name.git
+git remote
+git remote -v
+git push-u origin main
+
