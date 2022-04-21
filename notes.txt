@@ -1,0 +1,67 @@
+
+To get started, we need to install and initialize ruby on rails. 
+
+rvm install 2.3.0
+rvm --default use 2.3.0
+rvm gemset list
+rvm gemset create saasapp
+rvm gemset list
+rails -v
+rvm --default use ruby-2.3.0@saasapp
+gem install rails -v 5.0.0 --no-document
+ruby -v
+rails -v
+rvm --default use ruby-2.3.0@saasapp
+rails new saasapp
+cd saasapp
+touch .rvmrc
+npm install -g c9
+c9 .rvmrc
+(Type the next line of code into the .rvmrc file as shown in the video at 7:11)
+rvm use 2.3.0@saasapp
+
+and back in terminal
+
+cd ..
+cd saasapp
+y
+rvm rvmrc to .ruby-version
+rm .rvmrc
+
+this is all to ensure that all software versions match up with the tutorial.
+
+
+now, an explanation of all these commands:
+
+rvm is a tool for managing the version of ruby and rails. 
+
+its important to read documentation on the tools you use. for rvm, we can find docs at rvm.io.
+
+with rvm install, we installed the given version of ruby.
+
+then, we created a gemset, which is a prepackaged set of code. in this case, a custom set called saasapp.
+these are kinda like python modules where each gem gives easy access to a certain functionality.
+
+we installed the rails gem into our gemset, and checked the versions that were installed.
+
+
+next, we ran rails new, which generates the framework for a rails app.
+
+we created a new file called .rvmrc which is to ensure the correct version is always in use, then split it into the ruby-version file that will just load a bit quicker.
+
+
+
+now we need to set up this project with git. 
+
+from envirenment, do
+
+git config --global user.name "First Last"
+git config --global user.email your.email@address.com
+
+and then in saasapp 
+
+git init
+git add .
+git status
+git commit -m "Initial commit"
+
