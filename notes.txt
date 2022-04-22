@@ -107,3 +107,10 @@ before we edit the homepage, we need to make changes to the gemfile.
 we will make changes in a new branch first.
 
 git checkout -b pages-and-layout
+
+now in the new branch, we will update our gemfile to match the tutorial.
+
+then do bundle install bundle update
+
+and commit and push changes.
+
