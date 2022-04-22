@@ -114,3 +114,10 @@ then do bundle install bundle update
 
 and commit and push changes.
 
+explanation of changes:
+the gemfile contains all the included gems for our app and their version numbers.
+
+running bundle update/install will update or install the listed gems to their specified version.
+
+the gemfile.lock contains the master list of all gems and their dependencies. 
+
