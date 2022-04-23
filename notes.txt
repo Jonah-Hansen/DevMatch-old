@@ -198,3 +198,24 @@ otherwise, the application.html loads "yield" to the body which is whatever is i
 
 
 
+now to add a new page: the about page.
+
+just like the home page, we need to create a file in pages for about
+
+touch app/views/pages/about.html.erb
+
+then we need to edit the controller and the routes.
+
+app/controllers/pages_controller.rb
+
+add def about
+end
+
+config/routes.rb
+
+add get 'about', to: 'pages#about'
+
+the only thing thats different this time compared to the home page is in routes, 
+instead of pointing root to a page, we are saying when a client makes a get request to /about, return the about method of the page controller.
+
+
