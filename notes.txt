@@ -219,3 +219,20 @@ the only thing thats different this time compared to the home page is in routes,
 instead of pointing root to a page, we are saying when a client makes a get request to /about, return the about method of the page controller.
 
 
+to give us the ability to pretty things up a bit, we can use bootstrap and sass. 
+
+we should add bootstrap as a gem by putting gem 'bootstrap-sass', '3.3.7' to our gemfile.
+and of course, bundle install/update
+
+we should also rename our application.css file to application.css.scss and add
+
+@import 'bootstrap-sprockets';
+@inport 'bootstrap';
+
+
+finally we can start using it. in our application.html we will put the yield into a <div class="container">
+
+the documentation for bootstrap-sass is what tells us how to add it to our rails app. 
+
+we can also look at the full documentation for bootstrap to understand how it works.
+
