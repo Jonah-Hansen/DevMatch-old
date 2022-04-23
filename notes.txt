@@ -148,4 +148,53 @@ touch app/views/pages/home.html.erb
 now we need to add the route to this page file by adding root to: 'pages#home' to config/routes.rb
 
 
+explanation:
+
+to add a new page to our site we need to modify 3 files. the controller file, the view, and the route.
+
+we create the controller file and made a class called PagesController that inherits from the build in class ApplicationController.
+
+in this new class we added the method "home"
+
+we then create the home.html.erb file in views/pages. all files in views are for the presentation of the site.
+**note 
+the name home here needs to match the method in the controller.
+
+then we needed to add root to: 'pages#home' to routes.
+
+this is basically directing the root (default page) to display the home method of pages.
+
+
+
+to help make text look nicer, we can use cunstom fonts. 
+google has a library of these and we can use css to use them on our site.
+
+https://fonts.google.com/
+
+here we can browse for fonts we like and it givces us the html and css code needed to import them
+
+for open sans regular, bold, and extra bold here are the href links
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+we will add these links to the head of app/views/layouts/application.html.erb
+
+now we can configure our css to apply these fonts to our headers in app/asseets/stylesheets/application.css
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  }
+  
+
+explanation:
+
+the application.html.erb configures every page on the site. the application.css is the related css file.
+
+this is so that we don't need to add the same code in the html for each page if it needs to be there for all pages.
+
+otherwise, the application.html loads "yield" to the body which is whatever is in the specific page's views/pages file.
+
+
 
