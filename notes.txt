@@ -121,3 +121,31 @@ running bundle update/install will update or install the listed gems to their sp
 
 the gemfile.lock contains the master list of all gems and their dependencies. 
 
+
+
+now we can start with making our home page.
+
+we will start up the server with rails server
+
+now lets create a new file public/index.html and add a header to show that it works.
+
+this is the legacy way to make a home page. the proper rails ways is as follows:
+
+create a new controller with touch app/controllers/pages_controller.rb and define 
+
+class PagesController < ApplicationController
+    def home
+    end
+end
+
+
+now we can make a new folder for our pages and add our homepage ruby file
+
+mkdir app/views/pages
+touch app/views/pages/home.html.erb
+
+
+now we need to add the route to this page file by adding root to: 'pages#home' to config/routes.rb
+
+
+
