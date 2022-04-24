@@ -262,5 +262,26 @@ here is the codev we're adding to the top of body.
   </div>
 </nav>
 
+to add a bit of colour, we can add gradients to our backgrounds. 
+
+for this we can use our applicatoin.css.scss
+
+we can get premade code from sites like uigradients.com
+
+something like this
+
+body, .navbar {
+  //Gradient provided by @_ighosh at uiGradients.com
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.navbar {
+  border: none;
+}
+
+I removed the container class from yield in applicaion.html so that we can hive better control over separate elements.
+
+I made a jumbotron to fit the page title and had it set width according to its contents.
 
 

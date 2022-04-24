@@ -16,6 +16,25 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
  
+* {
+  // set default text colour to white 
+  color: White;
+}
+ 
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
-  }
+}
+  
+body, .navbar {
+  // gradient from uigradients.com
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+}
+
+.page-title {
+  width: fit-content;
+  padding: 20px;
+  background: #141E30;
+}
