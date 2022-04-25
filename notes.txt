@@ -325,3 +325,10 @@ instead of pointing to the exact link, we can use the prefix listed when running
 instead of "/about" do about_path or root_path.
 
 
+to enable mobile view functionality, we need to set up our bootstrap javascript. 
+
+if we shrink the window for the site, we can see there is a breakpoint at which the navbar collapses into a hamburger button.
+
+we can customize the look of this buttom with scss.
+
+the bootstrap gem documentation tells us how to require bootstrap javascripts
