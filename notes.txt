@@ -294,3 +294,10 @@ and set opacity: 0.75
 
 the sass way to refactor (remove repetition) is that we can nest selectors with &:hover{color: white; opacity: 0.75}
 
+
+to add some logos and icons we can use font awesome. we can check the documentation to see how to install it for ruby on rails.
+
+we can see al;l the icons on the font awesome cheatsheet
+
+once we find an icon we like, we need to add the link to our html. since we want to be able to click it, we need to nest it inside the anchor element that points to the home page.
+<i class="fa fa-group"></i>
