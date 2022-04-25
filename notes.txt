@@ -301,3 +301,19 @@ we can see al;l the icons on the font awesome cheatsheet
 
 once we find an icon we like, we need to add the link to our html. since we want to be able to click it, we need to nest it inside the anchor element that points to the home page.
 <i class="fa fa-group"></i>
+
+****dont forget to check liscences when choosing open source software to incorporate.
+
+
+
+when working with anchors on rails, we should do them the rails way as opposed to the regular html way.
+
+instead of <a href="destination"></a> we should do embeded ruby tags.
+<%= link_to "About", "/about" %>
+
+for nested links
+
+<%= lin_to "/", class: "navbar-brand" do %>
+  <i class="fa fa-group"></i>
+  DevMatch
+<% end %>
