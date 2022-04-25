@@ -313,7 +313,15 @@ instead of <a href="destination"></a> we should do embeded ruby tags.
 
 for nested links
 
-<%= lin_to "/", class: "navbar-brand" do %>
+<%= link_to "/", class: "navbar-brand" do %>
   <i class="fa fa-group"></i>
   DevMatch
 <% end %>
+
+another modification to this, is the destination for the links can be dynamic.
+
+instead of pointing to the exact link, we can use the prefix listed when running rails routes
+
+instead of "/about" do about_path or root_path.
+
+
