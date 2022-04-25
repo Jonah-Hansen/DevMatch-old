@@ -284,4 +284,13 @@ I removed the container class from yield in applicaion.html so that we can hive 
 
 I made a jumbotron to fit the page title and had it set width according to its contents.
 
+now to set the text in the navbar to white we have to overwrite what bootsatrap sets as the default.
+
+we can use inspector to see that the color is set with .navbar-default .navbar-brand and navbar-nav > li > a so lets add that to our scss to overwrite.
+
+we can also change the action on hover to change the opacity instead of color. we just target the same but with a:hover 
+and set opacity: 0.75
+
+
+the sass way to refactor (remove repetition) is that we can nest selectors with &:hover{color: white; opacity: 0.75}
 
