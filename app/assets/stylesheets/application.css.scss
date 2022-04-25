@@ -28,6 +28,7 @@
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   // set default navbar text colour to white 
   color: white;
+  font-weight: 800;
   &:hover {
     // set navbar items to lower opacity on hover.
     color: white;
@@ -36,7 +37,7 @@
 }
  
 //typography styles 
-h1, h2, h3 {
+h1, h2, h3, .navbar-brand {
   font-family: 'Open Sans', sans-serif;
 }
 
