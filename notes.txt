@@ -332,3 +332,13 @@ if we shrink the window for the site, we can see there is a breakpoint at which 
 we can customize the look of this buttom with scss.
 
 the bootstrap gem documentation tells us how to require bootstrap javascripts
+
+
+
+
+next we will add a contact us page with a form to our site.
+
+first we will need to set up making these additions in a new branch. 
+
+we will switch to branch main and merge our pages-and-layout, then create a new branch off the updated main called contact-form
+
