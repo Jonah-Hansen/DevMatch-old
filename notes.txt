@@ -342,3 +342,29 @@ first we will need to set up making these additions in a new branch.
 
 we will switch to branch main and merge our pages-and-layout, then create a new branch off the updated main called contact-form
 
+
+following object oriented programming, we should create a new controller for the forms that is separate from pages.
+
+touch app/controllers/contacts_controller.rb
+
+and make a new folder in views for contacts 
+
+mkdir app/views/contacts 
+
+and now an html.erb for new contact forms
+
+touch app/views/contacts/new.html.erb
+
+then because its a new page, we need to add it to controllers and routes.
+
+in contacts_controller.rb
+
+class ContactsController < ApplicationController
+  def new
+  end
+end
+
+,and in routes.rb
+resources :contacts
+
+now we sould be able to get to our new contact page at /contacts/new
