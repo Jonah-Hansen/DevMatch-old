@@ -56,3 +56,28 @@ body, .navbar {
   padding: 20px;
   background: #141E30;
 }
+
+.well {
+  background-color: #222;
+  border: 1px solid #333;
+}
+
+.form-control {
+  background-color: #111;
+  border: 1px solid #333;
+  color: white;
+}
+
+textarea { 
+  resize: vertical; }
+
+.btn-default {
+    color: #fff;
+    background-color: #333;
+    border-color: #444;
+    &:hover {
+      color: #fff;
+    background-color: #444;
+    border-color: #555;
+    }
+}

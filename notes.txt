@@ -336,7 +336,7 @@ the bootstrap gem documentation tells us how to require bootstrap javascripts
 
 
 
-next we will add a contact us page with a form to our site.
+next we will add a page for adding contacts to our site.
 
 first we will need to set up making these additions in a new branch. 
 
@@ -367,4 +367,31 @@ end
 ,and in routes.rb
 resources :contacts
 
-now we sould be able to get to our new contact page at /contacts/new
+now we should be able to get to our new contact page at /contacts/new
+
+now lets fill out our contact page.
+
+
+the proper rails way is like this:
+<%= form_for "/contacts" do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+    <%= f.submit 'Submit' %>
+  <% end %>
+  
+  we can find info about rails forms in the documentation
+  
+  this ruby code will generate the html that will display the form with the given parameters.
+  
+  now we can use bootstrap to pretty up the form a bit.
+  
+  we can look at the documentation for bootstrap forms to get some ideas.
+  
+  
+we should add a link to our contact page in the navbar, so we will just add a new list item to the navbar list
+link_to "Contact Us", new_contact_path
+
