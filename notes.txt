@@ -395,3 +395,24 @@ the proper rails way is like this:
 we should add a link to our contact page in the navbar, so we will just add a new list item to the navbar list
 link_to "Contact Us", new_contact_path
 
+
+with our newly created contact form, we'll need to make a database to store the submitions.
+
+we need to create a database table that saves the information submitted.
+
+we'll make a database file with
+
+rails generate migration CreateContacts
+
+now in the generated file we want to put in colums associated with our data
+
+t.string :name
+t.string :email 
+etc
+
+the migratiuon files are blueprints for any changes to our databases
+
+we need to run the migration to create the table.
+
+rails db:migrate
+
