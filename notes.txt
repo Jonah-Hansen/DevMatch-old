@@ -488,3 +488,29 @@ only saving it if it complete and valid.
 to do so we add some code to the class blueprint file contact.rb
 
 validates :(key), presence: true
+
+for displaying a message after submitting the form we use flash.
+
+in the controller file we added notice: to the redirect function
+
+then in the view file, we flash[:notice].
+
+instead, in the controlelr file we will save the error message before the redirect with
+
+flash[:success] = "message sent."
+
+else
+flash[:danger] = @contact.errors.full_messages.join(", ")
+
+
+we can make the alerts look nicer with some dynamic css styling.
+
+in the views file we will overwrite flash[:notice] with
+
+<% flash.each do |type, msg| %>
+  <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+<% end %>
+
+this will look at what key flash has, and inject a div with the corresponding value, with bootstrap alert Styling depending on the key.
+
+
