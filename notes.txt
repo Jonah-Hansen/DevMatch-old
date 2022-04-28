@@ -470,3 +470,21 @@ rails console
 Contact.all
 
 
+to improve the database display, we can use the hirb gem.
+
+add it to the gemfile
+
+gem 'hirb', '0.7.3'
+
+and bundle install.
+
+
+then in rails console, Hirb.enable
+contact.all
+
+when someone submits a contact form, we want to be able to validate it,
+only saving it if it complete and valid.
+
+to do so we add some code to the class blueprint file contact.rb
+
+validates :(key), presence: true
