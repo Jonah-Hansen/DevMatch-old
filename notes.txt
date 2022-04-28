@@ -425,4 +425,48 @@ and in the model file, class Contact < ActiveRecord::Base
 
 the model file is the blueprint for the information that is to be saved to the database
 
+it defines the form of the contact form objects.
+
+
+
+to actually make the functionality to save to the database, we nee to writer code in the contacts_controlelr file
+
+we need to tell rails to treat the form as an object. right now, the "new" method just displays the html from the views.
+
+
+in the mwthod, we add
+
+@contact = Contact.new
+
+this will create a new Contact object as defined in contact.rb (and by the database)
+
+@contact is an "instance variable" and we will link it to the html by replacing the /contact in the form_for with @contact.
+
+and to actually save it to the dfatabase, we need a new action in the controller called create with
+
+@contact = Contact.new(contact_params)
+if @contact.save
+  redirect_to new_contact_path, notice: "Message sent."
+else
+  redirect_to new_contact_path, notice: "Error occured."
+  
+  
+and finally as a sercurity feature, we will add 
+
+private
+  def contact_params
+    params.require(:contact).permit(:name, :email, :comments)
+  end
+
+also, we need somewhere to display the confirmation messages so we will add that to the html.
+
+inside the col div we will add <%= flash[:notice] %>
+
+
+testing it, we see that the notice "message sent" appeared so lets check the database.
+
+rails console
+
+Contact.all
+
 
