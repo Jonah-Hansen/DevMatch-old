@@ -528,3 +528,47 @@ append resources :contacts with , only: :create
 also, add , as:'new_contact' to the custom url line for contact-us.
 
 
+
+
+next, we want the site to automatically send us an email when someone submits the form. 
+
+to do so, we will make a new ruby file in app/mailers
+
+touch app/mailers/contact_mailer.rb
+
+in this file we will put
+
+class ContactMailer < ActionMailer::Base
+  default to: 'tce_mc@telus.net'
+  def contact_email(name, email, body)
+    @name = name
+    @email = email
+    @body = body
+    mail(from: email, subject: 'Contact Form Message')
+  end
+end
+
+
+this will send an email that appears to come from the sender, and contains the comments.
+
+this is the reccommended way to send mail with rails.
+
+
+we'll need a correspondfing views file for the email template.
+
+we'll make a folder in app/views/contact_mailer
+
+and a file called contact_email.html.erb
+
+and put 
+<!DOCTYPE html>
+<html>s
+  <head></head>
+  <body>
+    <p>You have received a message from the site's contact form, from
+    <%= "#{ @name }, #{ @email }." %></p>
+    <p><%= @body %></p>
+  </body>
+</html>
+
+
