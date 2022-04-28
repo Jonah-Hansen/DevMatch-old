@@ -514,3 +514,17 @@ in the views file we will overwrite flash[:notice] with
 this will look at what key flash has, and inject a div with the corresponding value, with bootstrap alert Styling depending on the key.
 
 
+right now, the url for the contact us page sucks. we can customize this by changing the routes.
+
+get 'contact-us', to: 'contacts#new'
+
+
+
+because we used resources :contacts in our routes file, we automatically get access to all posible types of http requests related to contacts.
+we want to clean it up a bit as we wont be using most of them.
+
+append resources :contacts with , only: :create
+
+also, add , as:'new_contact' to the custom url line for contact-us.
+
+
