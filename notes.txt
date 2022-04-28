@@ -416,3 +416,13 @@ we need to run the migration to create the table.
 
 rails db:migrate
 
+
+whenever saving to a database, we need a model file.
+
+touch app/models/contact.rb
+
+and in the model file, class Contact < ActiveRecord::Base 
+
+the model file is the blueprint for the information that is to be saved to the database
+
+
