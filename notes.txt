@@ -572,3 +572,54 @@ and put
 </html>
 
 
+
+now that we have everything set up for the email, we need a way to trigger it to actually send. 
+
+we want it to send when a new form is submitted so we will put it in the create action, after its been saved to the database.
+
+in contacts_controller, just before the flash,
+
+name = params[:contact][:name]
+email = params[:contact][:email]
+body = params[:contact][:comments]
+ContactMailer.contact_email(name, email, body).deliver
+
+
+
+since sending emails when running the app in a production environment isn't practical, now is a great timew to set up a production web server
+we can use a free service called heroku to host our website on proffesional-grade servers.
+
+heroku.com and set up a free account.
+
+now we can connect our development environment here to our heroku account. 
+
+first we'll need to install heroku to our vm here.
+
+npm install -g heroku
+
+now to connect,
+
+heroku login -i
+
+now to link ssh keys.
+
+heroku keys:add
+
+now to create our rails app on heroku:
+
+heroku create --stack heroku-18
+
+
+now to finally deploy our code to the production server.
+
+first we will merge to main.
+
+git checkout main
+
+git merge contact-form
+
+git push origin main
+
+now we can also push to heroku
+
+git push heroku main
