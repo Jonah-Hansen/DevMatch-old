@@ -623,3 +623,8 @@ git push origin main
 now we can also push to heroku
 
 git push heroku main
+
+
+heroku stack 18 doesn't support ruby 2.3.0
+
+we'll need to update to at least 2.7.6
