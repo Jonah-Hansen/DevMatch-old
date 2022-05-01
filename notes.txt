@@ -635,3 +635,11 @@ rvm use 2.7.6
 we'll also put ruby version into our gemfile.
 
 and bundle update/install
+
+still failed. bundler version is wrong.
+
+
+
+at this point I'll call this version 0.1 and start over with all up to date technologies instead of the courses reccomendation to use the older versions.
+
+going to push this all to a new branch and revert main back to the start.
